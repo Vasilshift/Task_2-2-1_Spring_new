@@ -3,15 +3,15 @@ package hiber.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "userCar")
+@Table(name = "test.userCar")
 public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(mappedBy = "usercar", cascade = CascadeType.ALL)
-    //@Column(name = "name_user")
+    @OneToOne(mappedBy = "userCar", cascade = CascadeType.ALL)
+    //@Column(name = "car_id")
     private User user;
 
     @Column(name = "model")
