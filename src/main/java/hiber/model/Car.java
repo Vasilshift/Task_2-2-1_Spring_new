@@ -11,7 +11,6 @@ public class Car {
     private Long id;
 
     @OneToOne(mappedBy = "userCar", cascade = CascadeType.ALL)
-    //@Column(name = "car_id")
     private User user;
 
     @Column(name = "model")
@@ -28,6 +27,9 @@ public class Car {
         this.user = user;
         this.model = model;
         this.series = series;
+    }
+
+    public Car(Long id, String user, String model, int series) {
     }
 
     public Long getId() {
