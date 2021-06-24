@@ -6,14 +6,31 @@ import javax.persistence.*;
 @Table(name = "test.users")
 public class User {
 
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Long id;
+
+   @Column(name = "name")
+   private String firstName;
+
+   @Column(name = "last_name")
+   private String lastName;
+
+   @Column(name = "email")
+   private String email;
+
    @OneToOne(cascade = CascadeType.ALL)
    @JoinColumn(name = "car_id")
    private Car userCar;
 
-   public User(String user5, String lastname5, String s, Car car) {
+   public User(String firstName, String lastName, String email, Car car) {
    }
 
    public Car getCar() {
+      return userCar;
+   }
+
+   public Car getUserCar() {
       return userCar;
    }
 
@@ -31,19 +48,6 @@ public class User {
               ", email='" + email + '\'' +
               '}';
    }
-
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
-
-   @Column(name = "name")
-   private String firstName;
-
-   @Column(name = "last_name")
-   private String lastName;
-
-   @Column(name = "email")
-   private String email;
 
    public User() {}
    
