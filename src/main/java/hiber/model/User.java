@@ -10,6 +10,7 @@ public class User {
    @JoinColumn(name = "car_id")
    private Car userCar;
 
+
    public Car getCar() {
       return userCar;
    }
@@ -45,11 +46,22 @@ public class User {
    public User() {}
    
    public User(String firstName, String lastName, String email) {
-      this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
    }
+
+   public User(String firstName, String lastName, String email, Car userCar) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.email = email;
+      this.userCar = userCar;
+   }
+
+
+
+
+
 
    public Long getId() {
       return id;
