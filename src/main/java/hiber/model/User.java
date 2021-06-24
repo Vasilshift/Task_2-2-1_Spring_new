@@ -23,8 +23,8 @@ public class User {
    @JoinColumn(name = "car_id")
    private Car userCar;
 
-   public User(String firstName, String lastName, String email, Car car) {
-   }
+//   public User(String firstName, String lastName, String email, Car car) {
+//   }
 
    public Car getCar() {
       return userCar;
@@ -38,24 +38,25 @@ public class User {
       this.userCar = userCar;
    }
 
-   @Override
-   public String toString() {
-      return "User{" +
-              "Car=" + userCar +
-              ", id=" + id +
-              ", firstName='" + firstName + '\'' +
-              ", lastName='" + lastName + '\'' +
-              ", email='" + email + '\'' +
-              '}';
-   }
+//   @Override
+//   public String toString() {
+//      return "User{" +
+//              "Car=" + userCar +
+//              ", id=" + id +
+//              ", firstName='" + firstName + '\'' +
+//              ", lastName='" + lastName + '\'' +
+//              ", email='" + email + '\'' +
+//              ""
+//              '}';
+//   }
 
    public User() {}
    
-   public User(String firstName, String lastName, String email) {
-      this.id = id;
+   public User(String firstName, String lastName, String email, Car userCar) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
+      this.userCar = userCar;
    }
 
    public Long getId() {
