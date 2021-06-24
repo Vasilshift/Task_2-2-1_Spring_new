@@ -27,9 +27,4 @@ public class UserDaoImp implements UserDao {
       return query.getResultList();
    }
 
-   @Override
-   public void add(Car car) {
-      sessionFactory.getCurrentSession().save(car);
-   }
-
 }

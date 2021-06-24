@@ -20,9 +20,9 @@ public class MainApp {
       userService.add(new User("User2", "Lastname2", "user2@mail.ru"));
       userService.add(new User("User3", "Lastname3", "user3@mail.ru"));
       userService.add(new User("User4", "Lastname4", "user4@mail.ru"));
-      userService.add(new User("User5", "Lastname5", "user5@mail.ru"));
+      userService.add(new User("User5", "Lastname5", "user5@mail.ru", new Car("User5", "Tesla", 5)));
 
-      userService.add(new Car(234L, "User1", "Tesla", 3));
+      //userService.add(new Car(234L, "User1", "Tesla", 3));
 
 
 
@@ -33,6 +33,7 @@ public class MainApp {
          System.out.println("First Name = "+user.getFirstName());
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("Email = "+user.getEmail());
+         System.out.println("Car = " +user.getCar());
          System.out.println();
       }
 

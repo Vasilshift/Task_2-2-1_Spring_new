@@ -10,6 +10,9 @@ public class User {
    @JoinColumn(name = "car_id")
    private Car userCar;
 
+   public User(String user5, String lastname5, String s, Car car) {
+   }
+
    public Car getCar() {
       return userCar;
    }
