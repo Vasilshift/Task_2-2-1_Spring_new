@@ -31,9 +31,8 @@ public class MainApp {
          System.out.println();
       }
 
-
-
-
+      System.out.println("We are finding... \"Tesla model 5\"");
+      System.out.println(userService.getUserByModelAndSeries("Tesla", 5));
 
       context.close();
    }

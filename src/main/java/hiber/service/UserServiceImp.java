@@ -29,17 +29,8 @@ public class UserServiceImp implements UserService {
 
    @Transactional
    @Override
-   void getUserByModelAndSeries() {
-
-      return userDao.
-      String HQL="FROM  User user LEFT OUTER JOIN FETCH addr.employee WHERE addr.addressId=:addrId";
-      Address address = session.createQuery(HQL, Address.class).setParameter("addrId", 1).uniqueResult();
-      System.out.println(address);
-      System.out.println(address.getEmployee());
-
+   public User getUserByModelAndSeries(String model, int series) {
+      return userDao.getUserByModelAndSeries(model, series);
    }
-
-
-
 
 }
