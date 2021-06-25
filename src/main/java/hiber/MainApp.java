@@ -18,11 +18,8 @@ public class MainApp {
 
       userService.add(new User("User1", "Lastname1", "user1@mail.ru", new Car("Tesla", 5)));
       userService.add(new User("User2", "Lastname2", "user2@mail.ru", new Car("Tesla", 6)));
-      userService.add(new User("User3", "Lastname3", "user3@mail.ru", new Car("Tesla", 5)));
-      userService.add(new User("User4", "Lastname4", "user4@mail.ru", new Car("Tesla", 5)));
-
-      //userService.add(new User("User5", "Lastname5", "user5@mail.ru", new Car("Tesla", 5)));
-
+      userService.add(new User("User3", "Lastname3", "user3@mail.ru", new Car("Tesla", 7)));
+      userService.add(new User("User4", "Lastname4", "user4@mail.ru", new Car("Tesla", 8)));
 
       List<User> users = userService.listUsers();
       for (User user : users) {
@@ -33,6 +30,10 @@ public class MainApp {
          System.out.println("Car = " +user.getCar());
          System.out.println();
       }
+
+
+
+
 
       context.close();
    }

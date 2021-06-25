@@ -28,12 +28,6 @@ public class Car {
         this.series = series;
     }
 
-//    public Car(Long id, String user, String model, int series) {
-//    }
-//
-//    public Car(String user5, String tesla, int i) {
-//    }
-
     public Long getId() {
         return id;
     }
