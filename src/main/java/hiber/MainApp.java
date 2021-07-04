@@ -32,7 +32,7 @@ public class MainApp {
       }
 
       System.out.println("We are finding... \"Tesla model 5\"");
-      System.out.println(userService.getUserByModelAndSeries("Tesla", 5));
+      System.out.println(userService.getUserByParam("Tesla", 5));
 
       context.close();
    }

@@ -35,18 +35,6 @@ public class User {
       this.userCar = userCar;
    }
 
-//   @Override
-//   public String toString() {
-//      return "User{" +
-//              "Car=" + userCar +
-//              ", id=" + id +
-//              ", firstName='" + firstName + '\'' +
-//              ", lastName='" + lastName + '\'' +
-//              ", email='" + email + '\'' +
-//              ""
-//              '}';
-//   }
-
    public User() {}
    
    public User(String firstName, String lastName, String email, Car userCar) {
