@@ -3,7 +3,7 @@ package hiber.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "test.users")
+@Table(name = "test.users10")
 public class User {
 
    @Id
