@@ -27,24 +27,6 @@ public class UserDaoImp implements UserDao {
       return query.getResultList();
    }
 
-//   @Override
-//   public User getUserByParam(String model, int series) {
-//      TypedQuery<Car> findCarQuery = sessionFactory.getCurrentSession().createQuery("from Car where model = :model and series = :series")
-//              .setParameter("model", model)
-//              .setParameter("series", series);
-//      List<Car> findCarList = findCarQuery.getResultList();
-//      if (!findCarList.isEmpty()) {
-//         Car findCar = findCarList.get(0);
-//         List<User> ListUser = listUsers();
-//         User FindUser = ListUser.stream()
-//                 .filter(user -> user.getCar().equals(findCar))
-//                 .findAny()
-//                 .orElse(null);
-//         return FindUser;
-//      }
-//      return null;
-//   }
-
    @Override
    public User getUserByParam(String model, int series) {
       TypedQuery<Car> findCarQuery = sessionFactory.getCurrentSession().createQuery("from Car where model = :model and series = :series")
@@ -53,15 +35,8 @@ public class UserDaoImp implements UserDao {
       List<Car> findCarList = findCarQuery.getResultList();
       if (!findCarList.isEmpty()) {
          Car findCar = findCarList.get(0);
-         List<User> ListUser = listUsers();
-
-         return ListUser.stream()
-                 .filter(user -> user.getCar().equals(findCar))
-                 .findAny()
-                 .orElse(null);
+         return listUsers().stream().filter(user -> user.getCar().equals(findCar)).findAny().orElse(null);
       }
       return null;
    }
-
-
 }
