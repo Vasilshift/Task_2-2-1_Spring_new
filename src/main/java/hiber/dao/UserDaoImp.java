@@ -32,11 +32,7 @@ public class UserDaoImp implements UserDao {
       TypedQuery<Car> findCarQuery = sessionFactory.getCurrentSession().createQuery("from Car where model = :model and series = :series")
               .setParameter("model", model)
               .setParameter("series", series);
-      List<Car> findCarList = findCarQuery.getResultList();
-      if (!findCarList.isEmpty()) {
-         Car findCar = findCarList.get(0);
-         return listUsers().stream().filter(user -> user.getCar().equals(findCar)).findAny().orElse(null);
-      }
-      return null;
+
+      return listUsers().stream().filter(user -> user.getCar().equals(findCarQuery)).findAny().orElse(null);
    }
 }
